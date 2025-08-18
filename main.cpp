@@ -15,17 +15,20 @@ public:
 		this->Name = Name;
 		this->gender = gender;
 	}
+
 	void displayInfo() 
 	{
-		cout << "I am " << Name << ", I am " << age << " years old, " << " I am a " << gender;
+		cout << "I am " << Name << ", I am " << age << " years old, " << " I am a " << gender << endl;
 	}
-	void Man(string nationality, string religion)
+	void displayInfo(string nationality, string religion)
 	{
-		
+		cout << "I am from " << nationality << " I am a follower of " << religion;
 	}
 
 };
 int main() {
 	Human h1("Ritham", 18, "Male");
 	h1.displayInfo();
+	h1.displayInfo("India", "Jainsim");
+	
 }
