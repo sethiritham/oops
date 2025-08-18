@@ -3,50 +3,29 @@
 #include <string>
 #define print(x) std::cout<<x<<endl
 using namespace std;
-class Human {
+class Human{
 public:
 	string Name;
-	string Gender;
 	int age;
-	string BloodGroup;
-	Human() {
-		print("I am a default constructor for human");
-	}
-	Human(string Name,string Gender,int age,string BloodGroup) {
-		this->Name = Name;
+	string gender;
+	string nationality;
+	string religion;
+	Human(string Name, int age, string gender) {
 		this->age = age;
-		this->Gender = Gender;
-		this->BloodGroup = BloodGroup;
+		this->Name = Name;
+		this->gender = gender;
 	}
-};
-class Indian {
-public:
-	string Nationality = "Indian";
-	Indian() {
-		print("Hi, I am from India, I am an Indian");
+	void displayInfo() 
+	{
+		cout << "I am " << Name << ", I am " << age << " years old, " << " I am a " << gender;
 	}
-};
-class IndianStudent : public Indian, public Human {
-public:
-string SchoolName = "Apeejay School Kharghar";
-IndianStudent(string Name, string Gender, int age, string BloodGroup) {
-	this->Name = Name;
-	this->age = age;
-	this->Gender = Gender;
-	this->BloodGroup = BloodGroup;
-}
-void getInfo() {
-	print(Name);
-	print(age);
-	print(Gender);
-	print(BloodGroup);
-	print(Nationality);
-	print(SchoolName);
-}
-};
-int main()
-{
-	IndianStudent I1("Ritham", "Male", 18, "B+ve");
-	I1.getInfo();
+	void Man(string nationality, string religion)
+	{
+		
+	}
 
+};
+int main() {
+	Human h1("Ritham", 18, "Male");
+	h1.displayInfo();
 }
