@@ -3,24 +3,18 @@
 #include <string>
 #define print(x) std::cout<<x<<endl
 using namespace std;
-class Parent{
+class Shape { //Abstract class
 public:
-	void getInfo() {
-		print("Parent class\n");
-
-	}
-
+	virtual void Draw() = 0; //pure virtual function
 };
-class Child : public Parent {
+class Square : public Shape {
 public:
-	void getInfo() {
-		print("Child class\n");
+	void Draw() {
+		print("Drawing a square");
 	}
 };
 int main() {
-	Child c1;
-	c1.getInfo();
-	Parent p1;
-	p1.getInfo();
+	Square s1;
+	s1.Draw();
 
 }
